@@ -30,7 +30,7 @@ module.exports.findLevel = function(word, cb){
 
   Word
     .findOne(query)
-    .success(function(word){
+    .then(function(word){
       cb(word.level);
     })
     .error(function(){
